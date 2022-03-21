@@ -1,0 +1,17 @@
+<h1 class="pb-4">Explore Categories</h1>
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mb-4">
+  <% if(categoriesById != "" || categoriesById.length != 0) {%>
+  <%categoriesById.map((category,index)=>{%>
+  <a href="/recipe/<%=category.id %> " class="col text-center category__link">
+    <div class="category__img shadow">
+      <img
+        src="/uploads/<%=category.image%> "
+        alt="American-Food"
+        srcset=""
+        loading="lazy"
+      />
+    </div>
+    <div class="pt-1"><%=category.name%></div>
+  </a>
+  <% }) %> <% } %>
+</div>
